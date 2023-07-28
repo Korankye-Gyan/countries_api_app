@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Country from '../components/country';
+import Search from '../components/Search'
 
 const Countrylist = () => {
   const [countrys, setCountrys] = useState([]);
@@ -11,11 +12,14 @@ const Countrylist = () => {
   }, []);
 
   return (
+    <>
+    <Search/>
     <ul>
       {countrys.map(country => (
         <Country country={country} key={country.numericCode} />
       ))}
     </ul>
+    </>
   );
 }
 
