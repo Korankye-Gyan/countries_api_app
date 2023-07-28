@@ -3,12 +3,10 @@ import React from 'react'
 
 const Country = ({country}) => {
   return (
-    <div>
-      <div className='card_details'>
-     
+    <div className='card_details'>
+
       <h3>{country.name}</h3>
-      
-    </div>
+
     </div>
   )
 }
