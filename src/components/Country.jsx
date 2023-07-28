@@ -1,5 +1,5 @@
 import React from 'react'
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Country = ({country}) => {
   return (
@@ -9,9 +9,11 @@ const Country = ({country}) => {
         alt='country flag'
         style={{width:'100%'}}
       />
-         <div style={{paddingLeft:'40px'}}>
+        <div style={{paddingLeft:'40px'}}>
 
-            <h3>{country.name}</h3>
+            <Link to={`/Countrydetails/${country.numericCode}`} className='country_Link'>
+               <h3>{country.name}</h3>
+            </Link>
 
             <p>Population: {country.population}</p>
             <p>Region: {country.region}</p>
